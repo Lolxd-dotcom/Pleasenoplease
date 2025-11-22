@@ -1,24 +1,21 @@
 async function loadImages() {
     const res = await fetch("/images");
-    const images = await res.json();
+    const files = await res.json();
     const gallery = document.getElementById("gallery");
 
     gallery.innerHTML = "";
 
-    images.forEach(img => {
-        const imgEl = document.createElement("img");
-        imgEl.src = "/uploads/" + img;
-        imgEl.dataset.name = img.toLowerCase();
-        gallery.appendChild(imgEl);
+    files.forEach(name => {
+        const img = document.createElement("img");
+        img.src = "/uploads/" + name;
+        img.dataset.name = name.toLowerCase();
+        gallery.appendChild(img);
     });
 }
 
-// search function
-document.getElementById("search").addEventListener("input", () => {
-    const term = document.getElementById("search").value.toLowerCase();
-    const images = document.querySelectorAll(".gallery img");
-
-    images.forEach(img => {
+document.getElementById("search").addEventListener("input", e => {
+    const term = e.target.value.toLowerCase();
+    document.querySelectorAll(".gallery img").forEach(img => {
         img.style.display = img.dataset.name.includes(term) ? "block" : "none";
     });
 });
