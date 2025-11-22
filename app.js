@@ -1,10 +1,3 @@
-/*
-  Image Hub
-  - Stores images (Blob) in IndexedDB
-  - Lets user title and add tags, search by words, shows post count
-  - Uses blob URLs (not base64) so we do not inline image data
-*/
-
 const DB_NAME = 'image-hub-db';
 const STORE = 'images';
 const DB_VERSION = 1;
