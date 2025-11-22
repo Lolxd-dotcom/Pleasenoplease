@@ -1,45 +1,34 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #fafafa;
+    background: #f2f2f2;
 }
 
 header {
     background: #222;
-    color: #fff;
+    color: white;
     padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    text-align: center;
 }
 
-nav a {
-    color: #fff;
-    margin-left: 20px;
-    text-decoration: none;
-}
-
-.upload-section, .search-section {
-    margin: 20px;
+.rules, .upload-section, .search-section {
+    width: 70%;
+    margin: 20px auto;
     text-align: center;
 }
 
 .gallery {
+    width: 90%;
+    margin: 20px auto;
     display: flex;
     flex-wrap: wrap;
-    margin: 20px;
-    gap: 20px;
+    gap: 15px;
     justify-content: center;
 }
 
 .gallery img {
-    max-width: 200px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-.rules {
-    width: 60%;
-    margin: 40px auto;
-    line-height: 1.8;
+    width: 200px;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
