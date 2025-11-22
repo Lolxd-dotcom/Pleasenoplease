@@ -8,15 +8,23 @@
 <body>
 
 <header>
-    <h1>Image Gallery</h1>
-    <nav>
-        <a href="index.html">Gallery</a>
-        <a href="rules.html">Rules</a>
-    </nav>
+    <h1>Image Gallery & Rules</h1>
 </header>
 
+<section class="rules">
+    <h2>Rules</h2>
+    <ul>
+        <li>(oppisite of yes x2) NSFW content</li>
+        <li>No copyrighted images without permission</li>
+        <li>Only upload images you own</li>
+        <li>Be respectful</li>
+    </ul>
+</section>
+
+<hr>
+
 <section class="upload-section">
-    <h2>Upload an Image</h2>
+    <h2>Upload Image</h2>
     <form action="/upload" method="POST" enctype="multipart/form-data">
         <input type="file" name="image" required>
         <button>Upload</button>
@@ -24,7 +32,8 @@
 </section>
 
 <section class="search-section">
-    <input type="text" id="search" placeholder="Search images…">
+    <h2>Search Images</h2>
+    <input type="text" id="search" placeholder="Search by filename…">
 </section>
 
 <section class="gallery" id="gallery"></section>
