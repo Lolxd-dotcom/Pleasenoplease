@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Image Hub</title>
+</head>
+<body>
+  <main id="app">
+    <div class="topbar">
+      <div class="left">
+        <input id="search" type="search" placeholder="Search by title or tags" inputmode="search" />
+      </div>
+      <div class="right">
+        <div id="count" class="count">0</div>
+        <label class="upload-btn" for="file">＋ Upload</label>
+        <input id="file" type="file" accept="image/*" />
+      </div>
+    </div>
+
+    <!-- Rules panel -->
+    <div class="rules" aria-live="polite">
+      <strong>Rules</strong>
+      <div class="rule-item">1: Upload anything that is r</div>
+    </div>
+
+    <div id="grid" class="grid"></div>
+
+    <!-- Modal / editor for title & tags shown after file pick -->
+    <div id="editor" class="modal hidden" role="dialog" aria-modal="true">
+      <div class="sheet">
+        <img id="preview" alt="preview" />
+        <input id="title" placeholder="Title" />
+        <input id="tags" placeholder="Tags (space or comma separated)" />
+        <div class="sheet-actions">
+          <button id="cancel">Cancel</button>
+          <button id="save" class="primary">Save</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
